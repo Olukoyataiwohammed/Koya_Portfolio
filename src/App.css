@@ -1,0 +1,113 @@
+
+#portfolio_homePage{
+    background-image: url(./assets/stack.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: solid thin black;
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+
+.imag{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+
+.section_header{
+    margin-left: 10px;
+    width: 500px;
+}
+
+.first_section{
+    
+    display: flex;
+}
+
+.sect{
+    margin-top: 40px;
+}
+
+@media only screen and (max-width:1440px){
+    
+}
+@media only screen and (max-width:1024px){
+    
+}
+@media only screen and (max-width:768px){
+    
+}
+@media only screen and (max-width:480px){
+    .Header .container{
+        
+        font-size: 8px;
+        padding: 0px !important;
+    }
+    .search{
+        width: 70px !important;
+        height: 20px;
+    }
+    .sect{
+        font-size: 12px;
+        margin-top: 20px;
+    }
+    .section_header{
+        font-size: 12px;
+        width: 200px !important;
+    }
+    .section_bio{
+        width: 250px !important;
+    }
+    .image{
+        width:300px !important;
+    }
+    
+}
+@media only screen and (max-width:376px){
+    .section_bio{
+        width: 200px !important;
+    }
+}
+@media only screen and (max-width:320px){
+    
+    .Header .container{
+        
+        font-size: 8px;
+        padding: 0px !important;
+    }
+    .search{
+        width: 70px !important;
+        height: 20px;
+    }
+    #portfolio_homePage{
+        padding: 0px !important;
+    }
+    .first_section{
+        margin-top: 30px !important;
+    }
+    .first_section .imag{
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+    }
+    .sect{
+        font-size: 12px;
+        margin-top: 20px;
+    }
+    .section_header{
+        font-size: 12px;
+        width: 200px !important;
+    }
+    .section_bio{
+        width: 250px !important;
+    }
+    .image{
+        width:300px !important;
+    }
+   
+
+
+}
