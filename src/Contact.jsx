@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const API_BASE = "http://127.0.0.1:8000/";
+const API_BASE = "https://koyeolukoya.pythonanywhere.com";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -28,7 +28,7 @@ const Contact = () => {
     setError("");
 
     try {
-      const res = await fetch(`${API_BASE}contact/`, {
+      const res = await fetch(`${API_BASE}/contact/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -54,7 +54,6 @@ const Contact = () => {
       <h1>Contact Me</h1>
 
       <form onSubmit={handleSubmit} className="card">
-        
         <input
           type="text"
           name="name"

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const API_BASE = "http://127.0.0.1:8000/";
+const API_BASE = "https://koyeolukoya.pythonanywhere.com/";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -35,15 +35,33 @@ const Projects = () => {
               <h3>{project.title}</h3>
               <p>{project.description}</p>
 
-              {project.link && (
-                <a href={project.link} target="_blank" rel="noreferrer">
-                  View Project →
+              <img
+                className="image"
+                src={`https://koyeolukoya.pythonanywhere.com${project.image}`}
+                alt={project.title}
+                style={{
+                  width: "400px",
+                  height: "150px",
+                  objectFit: "cover",
+                }}
+              />
+
+              <p>{project.tech_stack}</p>
+
+              {project.live_link && (
+                <a
+                  style={{ textDecoration: "none", color: "black" }}
+                  href={project.live_link}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  View Project
                 </a>
               )}
             </div>
           ))
         ) : (
-          <p>No projects found.</p>
+          <p>No projects found</p>
         )}
       </div>
     </div>

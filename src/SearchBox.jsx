@@ -1,9 +1,7 @@
-// src/SearchBox.js
-
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
-const API_BASE_URL = "http://127.0.0.1:8000";
+const API_BASE_URL = "https://koyeolukoya.pythonanywhere.com";
 
 const SearchBox = () => {
   const location = useLocation();
@@ -24,7 +22,6 @@ const SearchBox = () => {
         );
 
         const data = await response.json();
-
         setProjects(data);
       } catch (error) {
         console.error("Error fetching search results:", error);
@@ -64,7 +61,7 @@ const SearchBox = () => {
 
               {project.image && (
                 <img
-                  src={project.image}
+                  src={`${API_BASE_URL}${project.image}`}
                   alt={project.title}
                   style={{
                     width: "100%",
@@ -77,8 +74,7 @@ const SearchBox = () => {
               <p>{project.description}</p>
 
               <p>
-                <strong>Technologies:</strong>{" "}
-                {project.tech_stack}
+                <strong>Technologies:</strong> {project.tech_stack}
               </p>
             </div>
           ))}

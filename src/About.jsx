@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const API_BASE = "http://127.0.0.1:8000/";
+const API_BASE = "https://koyeolukoya.pythonanywhere.com";
 
 const About = () => {
   const [about, setAbout] = useState(null);
@@ -9,7 +9,7 @@ const About = () => {
   useEffect(() => {
     const fetchAbout = async () => {
       try {
-        const res = await fetch(`${API_BASE}about/about/`);
+        const res = await fetch(`${API_BASE}/about/about/`);
         const data = await res.json();
 
         setAbout(data.about);
@@ -37,8 +37,12 @@ const About = () => {
 
         <p>{about.bio}</p>
 
-        <p><strong>📍 Location:</strong> {about.location}</p>
-        <p><strong>📧 Email:</strong> {about.email}</p>
+        <p>
+          <strong>📍 Location:</strong> {about.location}
+        </p>
+        <p>
+          <strong>📧 Email:</strong> {about.email}
+        </p>
 
         {/* Optional Links */}
         <div style={{ marginTop: "10px" }}>
